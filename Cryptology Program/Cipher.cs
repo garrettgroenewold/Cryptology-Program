@@ -6,7 +6,6 @@ namespace Cryptology_Program
     {
         // Alphabet to be utilized by ciphers
         public static char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-
         
 
         // Each cipher will have a seperate encryption method

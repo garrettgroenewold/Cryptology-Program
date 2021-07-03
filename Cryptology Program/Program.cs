@@ -180,8 +180,7 @@ namespace Cryptology_Program
                         cipherOption = cipherOption.ToLower(); // sets user response to lowercase
                         cipherOption = char.ToUpper(cipherOption[0]) + cipherOption.Substring(1); // sets first letter in string to uppercase.
                         isCipherOption = Array.Exists(ciphers, input => input == cipherOption); // checks if user choice is in "ciphers" array
-                    }
-                    
+                    }                    
                     
                 }
                 
@@ -212,7 +211,6 @@ namespace Cryptology_Program
                         else
                         {
                             text = Caesar.Decrypt(text, shift); // runs encryption
-                            Console.WriteLine(text); // prints encrypted text
                         }
                         
                         break;
@@ -220,15 +218,8 @@ namespace Cryptology_Program
                     case "Atbash":
 
                         text = Atbash.Mirror(text); // runs Mirror method to encrypt or decrypt the text
-                        Console.WriteLine(text); // prints encrypted decrypted text
 
                         break;
-
-
-                    
-
-                    
-                   
 
                 }
                 Console.WriteLine("Would you like to run the text through another cipher? "); // asks user if they would like to run through the program with a different cipher
@@ -241,7 +232,9 @@ namespace Cryptology_Program
                     continueResponse = Console.ReadLine(); // reads user input
                     continueResponse = continueResponse.ToLower(); // changes user input to lower case
                 }
-            } while (continueResponse == "yes");   
+            } while (continueResponse == "yes");
+
+            Console.WriteLine(text); // prints finished text for user   
         }
     }
 }
