@@ -33,8 +33,7 @@ namespace Cryptology_Program
             {
                 if (Char.IsLetter(character) == true) // checks if the character is in the alphabet
                 {
-                    int characterIndex = Array.IndexOf(alphabet, character); // takes the index of the character in the "alphabet array
-                    //Console.WriteLine(characterIndex);
+                    int characterIndex = Array.IndexOf(alphabet, character); // takes the index of the character in the "alphabet" array
                     newIndex = characterIndex + shift; // shifts index by specified amount
                     
                     if (newIndex > 25) // check if the new index is within the bounds of the alphabet array
@@ -55,7 +54,7 @@ namespace Cryptology_Program
 
             }
              
-             encryptedText = string.Join("", encryptedTextArray); // joins finish array into a string
+            encryptedText = string.Join("", encryptedTextArray); // joins finish array into a string
 
 
             return encryptedText; // returns finished string
